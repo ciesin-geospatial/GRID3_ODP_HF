@@ -17,4 +17,6 @@ The goal of the project is to clean, standardize, and validate spatial health fa
 
 3. Validating spatial accuracy - This is a spatial problem where the other two are based on cleaning the attributes for each health facility. 
 
-
+## Sample Data Sets
+[healthsites.io](https://healthsites.io/map)
+[HDX](https://data.humdata.org/)
