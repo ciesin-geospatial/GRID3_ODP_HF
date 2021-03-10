@@ -1,0 +1,350 @@
+Country,Type,Proportion within Country,Count
+angola,health post,0.59,929
+angola,health centre,0.121,191
+angola,municipal hospital,0.047,74
+angola,centro materno infantil,0.026,41
+angola,hospital,0.018,28
+angola,hospital municipal de,0.014,22
+angola,sede health centre,0.008,12
+benin,centre de sante darrondissement,0.366,300
+benin,centre de sante,0.295,242
+benin,centre communal de sante,0.161,132
+benin,dispensaire,0.031,25
+benin,centre medical,0.027,22
+benin,hopital de zone,0.026,21
+benin,hopital,0.022,18
+benin,uvs unites de sante de village,0.011,9
+benin,centre de sante central,0.011,9
+benin,centre de sante de sousprefecture,0.01,8
+benin,centre hospitalier departemental,0.006,5
+botswana,health post,0.513,320
+botswana,clinic,0.357,223
+botswana,primary hospital,0.027,17
+botswana,district hospital,0.011,7
+burkina faso,centre de sante et de promotion sociale,0.787,1355
+burkina faso,dispensaire,0.043,74
+burkina faso,centre medical avec antenne chirurgicale,0.028,49
+burkina faso,centre medical,0.022,38
+burkina faso,urbain centre de sante et de promotion sociale,0.006,10
+burundi,centre de sante,0.705,469
+burundi,hopital de district,0.069,46
+burundi,i centre de sante,0.015,10
+burundi,ii centre de sante,0.011,7
+cameroon,centre de sante integre,0.658,2014
+cameroon,centre medical darrondissement,0.07,215
+cameroon,centre de sante,0.054,166
+cameroon,hopital de district,0.053,162
+cameroon,catholique centre de sante,0.023,71
+cameroon,2 centre de sante integre,0.011,35
+cameroon,1 centre de sante integre,0.01,31
+cameroon,catholique dispensaire,0.007,21
+cameroon,ii centre de sante integre,0.006,18
+cameroon,eec centre de sante,0.006,19
+cape verde,centro de saude,0.47,31
+cape verde,postos sanitarios,0.333,22
+cape verde,hospitais regionais,0.106,7
+cape verde,vaz postos sanitarios,0.03,2
+cape verde,pedro postos sanitarios,0.03,2
+cape verde,hospitais centrais,0.03,2
+central african republic,poste de sante,0.56,311
+central african republic,centre de sante c,0.103,57
+central african republic,centre de sante e,0.099,55
+central african republic,centre de sante b,0.076,42
+central african republic,centre de sante a,0.074,41
+central african republic,hopital prefectoraux,0.022,12
+central african republic,hopital regional universitaire,0.009,5
+central african republic,i poste de sante,0.007,4
+chad,centre de sante,0.804,1031
+chad,hopital de district,0.055,70
+chad,urbain centre de sante,0.018,23
+chad,ii centre de sante,0.01,13
+chad,est centre de sante,0.008,10
+comoros,postes de sante,0.682,45
+comoros,centre de sante,0.182,12
+comoros,centre medicourbain,0.045,3
+comoros,centre hospitalier regional,0.03,2
+comoros,centre medicochirurgical,0.03,2
+congo,centre de sante integre,0.747,245
+congo,lhopital de base,0.03,10
+congo,ii centre de sante integre,0.027,9
+congo,hopital comboutique,0.027,9
+congo,hopital general,0.012,4
+congo,gare centre de sante integre,0.009,3
+congo,i centre de sante integre,0.009,3
+congo,st centre de sante integre,0.009,3
+congo,poste centre de sante integre,0.006,2
+congo,iii centre de sante integre,0.006,2
+congo,hopital,0.006,2
+cote d'ivoire,centre de sante rural,0.694,1244
+cote d'ivoire,centre de sante urbain,0.15,269
+cote d'ivoire,hopital general,0.039,70
+cote d'ivoire,hospitalier regional,0.011,19
+cote d'ivoire,centre medicosocial,0.009,17
+cote d'ivoire,2 centre de sante rural,0.006,11
+democratic republic of the congo,centre de sante,0.54,7877
+democratic republic of the congo,poste de sante,0.266,3879
+democratic republic of the congo,centre medical,0.055,805
+democratic republic of the congo,centre de sante de reference,0.031,454
+democratic republic of the congo,hopital general de reference,0.023,340
+democratic republic of the congo,clinique,0.012,168
+democratic republic of the congo,dispensaire,0.009,127
+democratic republic of the congo,polyclinique,0.007,97
+djibouti,health post,0.621,41
+djibouti,community health centre,0.182,12
+djibouti,hospital,0.136,9
+djibouti,hospital medical centre,0.045,3
+equatorial guinea,district hospital,0.234,11
+equatorial guinea,centro sur,0.085,4
+equatorial guinea,provincial hospital,0.085,4
+equatorial guinea,public regional hospital,0.043,2
+eritrea,health station,0.658,177
+eritrea,health centre,0.193,52
+eritrea,hospital,0.052,14
+eritrea,mini hospital,0.019,5
+eritrea,clinic,0.015,4
+eritrea,adi health station,0.007,2
+eritrea,mini clinic,0.007,2
+eritrea,referral hospital,0.007,2
+eritrea,health clinic,0.007,2
+eswatini,clinic,0.644,87
+eswatini,nazarene clinic,0.111,15
+eswatini,public health unit,0.059,8
+eswatini,health centre,0.059,8
+eswatini,st,0.044,6
+eswatini,community clinic,0.022,3
+eswatini,hospital,0.022,3
+eswatini,salvation army clinic,0.015,2
+eswatini,government hospital,0.015,2
+eswatini,mission clinic,0.015,2
+eswatini,nazerene clinic,0.015,2
+eswatini,new,0.015,2
+ethiopia,clinic,0.483,2520
+ethiopia,health post,0.176,917
+ethiopia,health centre,0.138,720
+ethiopia,health station,0.026,138
+ethiopia,hospital,0.024,125
+ethiopia,clinic 1,0.006,29
+ethiopia,clinic 2,0.006,29
+gabon,dispensaire,0.614,333
+gabon,centre de sante,0.17,92
+gabon,centre medical,0.074,40
+gabon,1 dispensaire,0.02,11
+gabon,hospitalier regional,0.017,9
+gabon,2 dispensaire,0.015,8
+gabon,ii dispensaire,0.007,4
+gabon,centre de sante urbain,0.006,3
+gambia,clinic,0.408,42
+gambia,minor health centre,0.359,37
+gambia,major health centre,0.068,7
+gambia,hospital,0.039,4
+gambia,rch minor health centre,0.019,2
+gambia,gfpa clinic,0.019,2
+gambia,general hospital,0.019,2
+ghana,health centre,0.334,654
+ghana,communitybased health planning and services,0.31,608
+ghana,clinic,0.074,145
+ghana,community clinic,0.034,66
+ghana,rural clinic,0.031,60
+ghana,district hospital,0.027,52
+ghana,hospital,0.018,36
+ghana,government district hospital,0.012,23
+ghana,methodist clinic,0.007,13
+ghana,polyclinic,0.007,13
+ghana,sda clinic,0.006,11
+ghana,st,0.006,12
+guinea,poste de sante,0.604,1055
+guinea,centre de sante,0.228,398
+guinea,hopital prefectoral,0.014,25
+guinea bissau,hospital regional de,0.375,3
+guinea bissau,hospital,0.375,3
+guinea bissau,hospital de,0.25,2
+guinea bissau,de,0.25,2
+kenya,dispensary,0.637,3915
+kenya,health centre,0.154,947
+kenya,clinic,0.027,167
+kenya,district hospital,0.019,118
+kenya,subdistrict hospital,0.017,105
+kenya,catholic dispensary,0.016,100
+kenya,hospital,0.013,82
+kenya,st,0.011,66
+kenya,community dispensary,0.007,46
+kenya,aic dispensary,0.007,40
+kenya,mission dispensary,0.006,37
+kenya,mission hospital,0.006,36
+lesotho,health centre,0.769,90
+lesotho,hospital,0.154,18
+lesotho,st theresa health centre,0.026,3
+lesotho,sda health centre,0.017,2
+lesotho,filter clinic,0.017,2
+lesotho,st josephs,0.017,2
+lesotho,st james,0.017,2
+liberia,town,0.112,83
+liberia,community,0.023,17
+liberia,clinic,0.012,9
+liberia,mission,0.012,9
+liberia,hospital,0.011,8
+liberia,st,0.009,7
+liberia,medical centre,0.008,6
+liberia,new,0.008,6
+liberia,memorial,0.007,5
+madagascar,health centre,0.534,1429
+madagascar,health post,0.303,810
+madagascar,hospital,0.044,117
+madagascar,sud health centre,0.007,19
+madagascar,ii health post,0.006,16
+malawi,health centre,0.66,428
+malawi,dispensary,0.116,75
+malawi,hospital,0.037,24
+malawi,rural hospital,0.035,23
+malawi,clinic,0.035,23
+malawi,district hospital,0.034,22
+malawi,st,0.008,5
+malawi,health post,0.006,4
+malawi,central hospital,0.006,4
+mali,community health centre,0.767,1133
+mali,referral health centre,0.041,61
+mali,clinique,0.04,59
+mali,central community health centre,0.024,35
+mali,medicale clinique,0.009,14
+mali,hopital,0.007,11
+mali,polyclinique,0.006,9
+mauritania,health post,0.721,465
+mauritania,health centre,0.116,75
+mauritania,hospital,0.022,14
+mauritania,health post i,0.014,9
+mauritania,2 health post,0.012,8
+mauritania,health post ii,0.008,5
+mauritania,health post iii,0.008,5
+mauritania,health post iv,0.006,4
+mauritania,health post v,0.006,4
+mauritania,general hospital,0.006,4
+mauritius,community health centre,0.669,111
+mauritius,area health centre,0.157,26
+mauritius,regional hospital,0.03,5
+mauritius,family health clinic,0.018,3
+mauritius,district hospital,0.018,3
+mauritius,grand baie community health centre,0.012,2
+mauritius,de masque community health centre,0.012,2
+mauritius,community hospital,0.012,2
+mozambique,centro de saude rural ii,0.584,922
+mozambique,posto de saude,0.16,252
+mozambique,centro de saude rural i,0.079,124
+mozambique,centro de saude urbano b,0.032,50
+mozambique,centro de saude urbano c,0.029,46
+mozambique,centro de saude urbano a,0.02,32
+mozambique,hospital rural,0.016,26
+mozambique,hospital distrital,0.009,15
+namibia,clinic,0.756,279
+namibia,health centre,0.117,43
+namibia,district hospital,0.079,29
+namibia,hospital,0.011,4
+namibia,intermediate hospital,0.008,3
+namibia,phc clinic,0.008,3
+niger,health hut,0.605,1747
+niger,integrated health centre,0.276,797
+niger,hospital,0.014,41
+nigeria,primary health centre,0.215,4476
+nigeria,health centre,0.155,3221
+nigeria,dispensary,0.148,3076
+nigeria,health post,0.14,2907
+nigeria,health clinic,0.132,2741
+nigeria,clinic,0.051,1063
+nigeria,basic health centre,0.029,593
+nigeria,general hospital,0.025,523
+nigeria,comprehensive health centre,0.021,427
+nigeria,primary health clinic,0.014,299
+nigeria,health facility,0.008,161
+nigeria,hospital,0.008,161
+nigeria,basic health clinic,0.007,145
+nigeria,cottage hospital,0.007,146
+nigeria,primary health care,0.006,126
+nigeria,model health centre,0.006,135
+rwanda,health centre,0.666,381
+rwanda,district hospital,0.063,36
+rwanda,health post,0.037,21
+rwanda,fosacom communityowned health facility,0.017,10
+rwanda,national referral hospital,0.007,4
+rwanda,provincial hospital,0.007,4
+sao tome and principe,postos de saude 2,0.12,6
+sao tome and principe,postos de saude 3,0.12,6
+sao tome and principe,postos de saude 1,0.1,5
+sao tome and principe,postos de saude 4,0.08,4
+sao tome and principe,centros de saude,0.08,4
+sao tome and principe,postos de saude comunitaria 5,0.06,3
+sao tome and principe,postos de saude comunitaria 4,0.04,2
+sao tome and principe,postos de saude comunitaria 6,0.04,2
+sao tome and principe,postos de saude comunitaria 7,0.04,2
+sao tome and principe,postos de saude comunitaria 8,0.04,2
+sao tome and principe,hospitais,0.04,2
+senegal,poste de sante,0.656,884
+senegal,centre de sante,0.063,85
+senegal,hopital regional,0.01,13
+senegal,ii poste de sante,0.007,10
+senegal,sud poste de sante,0.006,8
+seychelles,health centre,0.833,15
+sierra leone,maternal and child health post,0.467,523
+sierra leone,community health post,0.179,200
+sierra leone,community health centre,0.159,178
+sierra leone,health post,0.021,24
+sierra leone,hospital,0.017,19
+sierra leone,government hospital,0.011,12
+sierra leone,health centre,0.008,9
+sierra leone,clinic,0.006,7
+somalia,health post,0.471,414
+somalia,maternal child health centre,0.301,265
+somalia,hospital,0.058,51
+somalia,health centre,0.027,24
+somalia,opd maternal child health centre,0.02,18
+somalia,district hospital,0.011,10
+somalia,srcs maternal child health centre,0.007,6
+somalia,regional hospital,0.007,6
+somalia,central maternal child health centre,0.006,5
+south africa,clinic,0.689,2965
+south africa,hospital,0.073,313
+south africa,chc,0.065,279
+south africa,satellite clinic,0.046,200
+south africa,gateway clinic,0.029,125
+south africa,health post,0.008,33
+south sudan,primary health care unit,0.695,1215
+south sudan,primary health care centre,0.168,294
+south sudan,county hospital,0.016,28
+sudan,hospital,0.882,240
+sudan,rural hospital,0.037,10
+sudan,teaching hospital,0.015,4
+sudan,town rural hospital,0.007,2
+sudan,pediatric hospital,0.007,2
+sudan,chinese,0.007,2
+tanzania,dispensary,0.815,5138
+tanzania,health centre,0.106,669
+tanzania,hospital,0.013,81
+tanzania,district hospital,0.01,63
+tanzania,rc dispensary,0.008,50
+tanzania,designated district hospital,0.006,36
+tanzania,mission dispensary,0.006,37
+tanzania,st,0.006,38
+togo,unite de soins peripherique,0.541,112
+togo,centre medicosocial,0.246,51
+togo,centre hospitalier prefectoral,0.145,30
+togo,centre hospitalier regional,0.024,5
+togo,university centre hospitalier universitaire,0.01,2
+uganda,health centre ii,0.557,2114
+uganda,health centre iii,0.314,1192
+uganda,health centre iv,0.05,188
+uganda,hospital,0.029,109
+zambia,health post,0.65,821
+zambia,rural health centre,0.085,107
+zambia,health centre,0.078,98
+zambia,clinic clinic,0.03,38
+zambia,district level 1 hospital,0.022,28
+zambia,mission level 1 hospital,0.019,24
+zambia,general level 2 hospital,0.006,8
+zambia,urban clinic clinic,0.006,8
+zanzibar,primary health care unit,0.862,125
+zanzibar,primary health care centre,0.028,4
+zanzibar,district hospital,0.014,2
+zanzibar,hospital,0.014,2
+zimbabwe,clinic,0.445,550
+zimbabwe,rural health clinic,0.4,495
+zimbabwe,rural hospital,0.084,104
+zimbabwe,district hospital,0.038,47
+zimbabwe,provincial hospital,0.006,7
