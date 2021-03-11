@@ -2,6 +2,10 @@ import re
 import unidecode
 from collections import Counter
 
+import pandas as pd
+import numpy as np
+from tabulate import tabulate
+
 
 def deaccent(input_string):
     output_string = unidecode.unidecode(input_string)
@@ -61,7 +65,7 @@ def strip_number_prefix(input_string, numbers='i,ii,iii,iv,v,vi,vii,viii,ix,x'):
 
 
 def consolidate_count_list(input_list):
-    output_list = [(item, count) for item, count in input_list if item.strip() != '' and len(item) > 1]
+    output_list = [(item, count) for item, count in input_list if item.strip() != '']
     dic = {}
     for item, count in output_list:
         if dic.get(item) is None:
@@ -131,3 +135,40 @@ def extract_types(input_list, thres=None, maximum_expected_number_of_types=20, r
         results = [(item, round(count / number_of_names_in_this_list, 3), count) for item, count in results]
 
     return results
+
+
+def clean_and_dropna(data, col):
+    data[col] = data[col].apply(lambda x: np.nan if isinstance(x, str) and x.strip() == '' else x)
+    data.dropna(subset=[col], inplace=True)
+
+
+def change_column_name(data, change_from, change_to):
+    data.rename(columns={change_from: change_to}, inplace=True)
+
+def demo_extract_types_on_dataset(df):
+
+    # Get the unique countries in the dataset
+    list_of_countries = df['Country'].unique().tolist()
+
+    # Build a dictionary where entry key is the name of the country,
+    # entry value is the list of health facility types in that country
+    country_and_common_facility_types = {}
+
+    # Iterate through all the unique countries
+    for country_name in list_of_countries:
+
+        print('Country: ', country_name, '\n')
+
+        # Get the list of names in this country
+        country_part = df.loc[df['Country'] == country_name, 'name'].tolist()
+
+        # Extract types
+        common_facility_types_in_this_country = extract_types(country_part, return_proportion=True)
+
+        # Save subtypes to country based dictionary
+        country_and_common_facility_types[country_name] = common_facility_types_in_this_country
+
+        # Print out results in tabular format
+        print(tabulate(common_facility_types_in_this_country, headers=['Type', 'Proportion', 'Count'], tablefmt='fancy_grid'))
+
+        print('\n-------------------------------------------------------------------------------------\n')
