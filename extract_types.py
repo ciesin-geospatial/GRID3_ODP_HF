@@ -78,7 +78,9 @@ def health_facility_rules(input_list):
     return output_list
 
 def extract_types(input_list, thres=None, maximum_expected_number_of_types=20, return_proportion=False, custom_rule=health_facility_rules):
-
+    '''
+    Given a list of names, return the common types in the names along with their frequency
+    '''
     name_list = [clean_string(name) for name in list(input_list)]
     number_of_names_in_this_list = len(name_list)
 
