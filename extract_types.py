@@ -1,11 +1,13 @@
 import re
-import unidecode
 from collections import Counter
+import unicodedata
+import math
 
 
-def deaccent(input_string):
-    output_string = unidecode.unidecode(input_string)
-    return output_string
+def remove_accents(input_str):
+    # https://stackoverflow.com/a/517974
+    nfkd_form = unicodedata.normalize('NFKD', input_str)
+    return u"".join([c for c in nfkd_form if not unicodedata.combining(c)])
 
 
 def remove_special_characters_and_shrink_whitespace(input_string):
@@ -14,8 +16,10 @@ def remove_special_characters_and_shrink_whitespace(input_string):
 
 
 def clean_string(input_string):
-    output_string = remove_special_characters_and_shrink_whitespace(deaccent(input_string.lower()))
-    return output_string
+    if (isinstance(input_string, str) and input_string.strip() != '') or (not math.isnan(input_string)):
+        return remove_special_characters_and_shrink_whitespace(remove_accents(str(input_string).lower()))
+    else:
+        return ''
 
 
 def get_unique_ngram(list_of_ordered_tokens, n):
@@ -77,11 +81,65 @@ def health_facility_rules(input_list):
     output_list = consolidate_count_list(output_list)
     return output_list
 
-def extract_types(input_list, thres=None, maximum_expected_number_of_types=20, return_proportion=False, custom_rule=health_facility_rules):
+
+def print_table(table_data):
+
+    table_data = [list(tup) for tup in table_data]
+
+    no_percentage = False
+    float_rounding = 3
+
+    format_string = ''
+
+    for i in range(len(table_data[0])):
+        this_column = [tup[i] for tup in table_data]
+
+        if isinstance(this_column[0], str):
+            column_type = 'str'
+            max_string_len = max([len(x) for x in this_column])
+            max_string_len = max(10, max_string_len + 5)
+            format_string += '{: <' + str(max_string_len) + '}'
+
+        elif isinstance(this_column[0], float):
+            if no_percentage:
+                column_type = 'float'
+            else:
+                if max(this_column) <= 1 and min(this_column) >= 0:
+                    column_type = 'percentage'
+                    d = 0  # find the number of digits till which there are value other than zero
+                    while not all([x * (10**d) == int(x * (10**d)) for x in this_column]):
+                        d += 1
+                        if d > 6:
+                            break
+                    float_rounding = d - 2
+                    format_string += '{: >10.' + str(float_rounding) + '%}'
+                else:
+                    column_type = 'float'
+            if column_type == 'float':
+                max_abs_num_len = len(str(int(max([abs(x) for x in this_column]))))
+                max_abs_num_len = max(10, max_abs_num_len + 5 + float_rounding)
+                format_string += '{: >' + str(max_abs_num_len) + '}'
+            this_column = [round(x, float_rounding) for x in this_column]
+        elif isinstance(this_column[0], int):
+            column_type = 'int'
+            max_abs_num_len = len(str(int(max([abs(x) for x in this_column]))))
+            max_abs_num_len = max(10, max_abs_num_len + 5)
+            format_string += '{: >' + str(max_abs_num_len) + '}'
+
+    if column_type == 'percentage':
+        for j in range(len(table_data)):
+            table_data[j][i] *= 100
+
+    for row in table_data:
+        print(format_string.format(*row))
+
+
+def extract_types(input_list, thres=None, maximum_expected_number_of_types=20, return_proportion=False, no_full_match=False, custom_rule=health_facility_rules):
     '''
     Given a list of names, return the common types in the names along with their frequency
     '''
-    name_list = [clean_string(name) for name in list(input_list)]
+    name_list = [str(x) for x in list(input_list) if (isinstance(x, str) and x.strip() != '') or (not math.isnan(x))]
+    name_list = [clean_string(name) for name in name_list]
     number_of_names_in_this_list = len(name_list)
 
     phrase_counter = Counter()
@@ -115,21 +173,41 @@ def extract_types(input_list, thres=None, maximum_expected_number_of_types=20, r
             minimum_count = 1
     # If thres is provided, calculate the minimum count by multiplying threshold with number of names in the list
     else:
-        minimum_count = int(thres * number_of_names_in_this_list)
+        if thres < 1 and thres >= 0:
+            minimum_count = int(thres * number_of_names_in_this_list)
+        elif thres >= 1 and int(thres) == thres:
+            minimum_count = thres
 
     minimum_count = max(1, minimum_count)
 
-    sorted_consolidated_ngram_freq = [item for item in sorted_consolidated_ngram_freq if item[-1] > minimum_count]
+    results = [item for item in sorted_consolidated_ngram_freq if item[-1] > minimum_count]
 
-    no_full_coverage_list = [(item, count) for item, count in sorted_consolidated_ngram_freq if item not in name_list]
+    if no_full_match:  # Should remove items whose occurrences are all full match in the list
+        results = [(item, count) for item, count in results if item not in name_list]
 
     if custom_rule:
-        results = custom_rule(no_full_coverage_list)
-    else:
-        results = no_full_coverage_list
+        results = custom_rule(results)
 
     # If return_proportion is true, return the results in the format (ngram, proportion, count)
     if return_proportion:
         results = [(item, round(count / number_of_names_in_this_list, 3), count) for item, count in results]
 
+    print_table(results)
+
     return results
+
+
+def match_type_string(entry, common_types):
+
+    if isinstance(common_types[0], tuple):
+        common_type_strings = [x[0] for x in sorted(common_types, key=lambda x: (-x[0].count(' '), -len(x[0])))]
+    elif isinstance(common_types[0], str):
+        pass
+    else:
+        raise
+
+    for type_string in common_type_strings:
+        if ' ' + type_string + ' ' in ' ' + entry + ' ':
+            return type_string.strip()
+
+    return math.nan
